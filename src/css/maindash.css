@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: whitesmoke;
+    color: #333;
+}
+
+.main_dash{
+    height: 100vh;
+    width: 100%;
+}
+
+/* Dashboard Navigator */
+
+.nav_body{
+    height: 20vh;
+    width: 100%;
+    background-color: #F39E60;
+}
+.nav_col1{
+    display: flex;
+    height: 30%;
+}
+.nav_col1 ul{
+    list-style-type: none;
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Displays items in a horizontal row */
+    gap: 20px; /* Adds spacing between items */
+    text-align: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.nav_col2{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    background-color: aqua;
+}
+.nav_col2 .logo img{
+    height: 100%;
+}
+.logo{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.shop_name{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.shop_name p{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.search_bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.search_bar input{
+    width: 65%;
+    height: 35px;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.search_bar input:focus{
+    outline: none;
+    box-shadow: none; /* Removes the Bootstrap focus shadow */
+    border: none; /* Removes the border */
+}
+
+.search_bar button{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    padding-right: 180px;
+}
+

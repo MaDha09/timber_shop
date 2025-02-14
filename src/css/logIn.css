@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: whitesmoke;
+    color: #333;
+}
+/* BODY */
+
+.login_body{
+    height: 100vh;
+    width: 80%;
+    background-color: #F39E60;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*  Navbar */
+
+.navbar_body{
+    height: 15vh;
+    min-height: 60px;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.logo_div{
+    display: flex;
+    align-items: center;
+}
+.txt_logo{
+    display: flex;
+    width: fit-content;
+}
+.txt_logo p {
+    font-size: 40px;
+    font-weight: 600;
+}
+.timber{
+    color: #7C444F;
+}
+.shop{
+    color: #8fee5c;
+}
+.logo img{
+    height: 15vh;
+    width: fit-content;
+}
+
+.logIn{
+    background-color: #7C444F;
+    color: white;
+    font-weight: 600;
+    padding: 10px 30px 10px 30px;
+}
+.logIn:hover{
+    background-color: #F39E60;
+    color: white;
+    transition: 0.5s all ease;
+}
+
+/* MainBody */
+
+.login_colbody{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+}
+.login_col1{
+    width: 50%;
+    height: 100%;
+}
+.login_col2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_con img{
+    height: 45vh;
+}
+
+.txt_logo2{
+    margin-left: 28%;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+.txt_logo2 p {
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: -70px;
+}
+.theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.theme p {
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: 10%;
+    line-height: 40px;
+    color: #3a0b0b;
+}
+
+/* Form */
+
+
+.form_log{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.form_container{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.2); /* 80% opacity */
+    padding: 50px;
+    border-radius: 15px;
+}
+.input{
+    margin-bottom: 40px;
+}
+.input input{
+    height: 40px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+}
+.input input::placeholder{
+    padding: 10px;
+}
+.select{
+    height: 40px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+}
+.button{
+    height: 50px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+}
