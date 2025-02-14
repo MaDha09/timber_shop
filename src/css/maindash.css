@@ -12,6 +12,10 @@ body{
 .main_dash{
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Dashboard Navigator */
@@ -42,7 +46,6 @@ body{
     height: 70%;
     width: 100%;
     display: flex;
-    background-color: aqua;
 }
 .nav_col2 .logo img{
     height: 100%;
@@ -89,3 +92,71 @@ body{
     padding-right: 180px;
 }
 
+/* Cart */
+
+.cart{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.cart img{
+    height: 30px;
+}
+
+/* MainBody */
+
+.dashbody{
+    height: 80vh;
+    width: 90%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* ROW 1 */
+.dashbody_row1{
+    height: 45%;
+    width: 100%;
+    background-color: #F39E60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row1_body{
+    height: 100%;
+    width: 80%;
+    background-color: bisque;
+    display: flex;
+}
+.row1_col1{
+    height: 100%;
+    background-color: aquamarine;
+}
+.row1_col1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.row1_col2{
+    height: 100%;
+    background-color: black;
+}
+.row1_col3{
+    height: 100%;
+    background-color: burlywood;
+}
+
+/* ROW 2 */
+.dashbody_row2{
+    height: 15%;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+/* ROW 3 */
+.dashbody_row3{
+    height: 35%;
+    width: 100%;
+    background-color: rgb(25, 68, 105);
+}

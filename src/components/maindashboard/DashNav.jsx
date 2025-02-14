@@ -1,6 +1,7 @@
 import React from "react";
 import logo from '../../assets/image/logo2.png';
 import search from '../../assets/image/search.svg';
+import cart from '../../assets/image/cart4.svg';
 
 function DashNav(){
         return(
@@ -34,7 +35,9 @@ function DashNav(){
                                         <button><img src={search}/></button>
                                 </div>
 
-                                <div className="cart row2col4 col-2"></div>
+                                <div className="cart row2col4 col-2">
+                                        <img src={cart}/>
+                                </div>
                         </div>
 
                 </div>
