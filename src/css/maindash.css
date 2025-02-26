@@ -228,3 +228,26 @@ body{
 .row3_title p{
     font-weight: 400;
 }
+/* items-display */
+
+.items-display{
+    height: 80vh;
+    width: 60%;
+    background-color: aquamarine;
+    overflow-y: auto;
+}
+.items-display .btn{
+    right: 0;
+}
+.back{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Pushes the button to the right */
+    padding: 10px;
+}
+
+.item-body{
+    height: 90%;
+    width: 100%;
+}
