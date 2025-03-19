@@ -1,68 +1,81 @@
-import React from "react";
-import '../../css/signup.css';
+import React, { useState } from "react";
+import "../../css/signup.css";
+import insertUser from "../tools/database/InsertUser";
 
-function Signform(){
+function Signform() {
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    user_type: "seller", 
+  });
 
-    return(
-        <>
-            <div className="form_log">
+ 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-                    <form className="form_container">
 
-                                <div className="input">
-                                    <input type="text"
-                                    name="name"
-                                    id="name"
-                                    placeholder="Name..."
-                                    required
-                                    />
-                                </div>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await insertUser(formData.username, formData.email, formData.password, formData.user_type);
+    alert("Account Created Successfully!");
+    setFormData({ username: "", email: "", password: "", user_type: "seller" }); 
+  };
 
-                                <div className="input">
-                                    <input type="text"
-                                    name="username"
-                                    id="username"
-                                    placeholder="Username..."
-                                    required
-                                    />
-                                </div>
+  return (
+    <div className="form_log">
+      <form className="form_container" onSubmit={handleSubmit}>
+        <div className="input">
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username..."
+            value={formData.username}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-                                <div className="input">
-                                    <input type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Email..."
-                                    required
-                                    />
-                                </div>
+        <div className="input">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email..."
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-                                <div className="input">
-                                    <input type="text"
-                                    name="password"
-                                    id="password"
-                                    placeholder="Password..."
-                                    required
-                                    />
-                                </div>
+        <div className="input">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password..."
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-                                <div className="input">
-                                    <select name="user" id="user" className="select">
-                                        <option value="seller">Seller</option>
-                                        <option value="manufacturer">Manufacturer</option>
-                                        <option value="buyer">Buyer</option>
-                                    </select>
-                                </div>
+        <div className="input">
+          <select name="user_type" id="user" className="select" value={formData.user_type} onChange={handleChange}>
+            <option value="seller">Seller</option>
+            <option value="manufacturer">Manufacturer</option>
+            <option value="buyer">Buyer</option>
+          </select>
+        </div>
 
-                                <button className="button mb-5">Create Account</button>
+        <button className="button mb-5" type="submit">Create Account</button>
 
-                                <p>Already have an acc ? <a href="">Click Here!</a> </p>
-                           
-
-                    </form>
-
-            </div>
-        </>
-    )
+        <p>Already have an account? <a href="#">Click Here!</a></p>
+      </form>
+    </div>
+  );
 }
 
 export default Signform;

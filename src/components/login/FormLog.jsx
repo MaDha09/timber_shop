@@ -1,50 +1,50 @@
-import React from "react";
-import '../../css/logIn.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import LoginUser from "../tools/database/LoginUser";
 
-function FormLog(){
+function FormLog() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-    return(
-        <>
-            <div className="form_log">
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    await LoginUser(username, password, navigate);
+  };
 
-                    <form className="form_container">
+  return (
+    <div className="form_log">
+      <form className="form_container" onSubmit={handleLogin}>
+        <div className="input">
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username..."
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
 
-                                <div className="input">
-                                    <input type="text"
-                                    name="username"
-                                    id="username"
-                                    placeholder="Username..."
-                                    required
-                                    />
-                                </div>
+        <div className="input">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password..."
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
 
-                                <div className="input">
-                                    <input type="text"
-                                    name="password"
-                                    id="password"
-                                    placeholder="Password..."
-                                    required
-                                    />
-                                </div>
+        <button className="button mb-5" type="submit">Login</button>
 
-                                <div className="input">
-                                    <select name="user" id="user" className="select">
-                                        <option value="seller">Seller</option>
-                                        <option value="manufacturer">Manufacturer</option>
-                                        <option value="buyer">Buyer</option>
-                                    </select>
-                                </div>
-
-                                <button className="button mb-5">Login</button>
-
-                                <p>Don't have an account yet ? <a href="">Click Here!</a> </p>
-                           
-
-                    </form>
-
-            </div>
-        </>
-    )
+        <p>Don't have an account yet? <a href="">Click Here!</a></p>
+      </form>
+    </div>
+  );
 }
 
 export default FormLog;
