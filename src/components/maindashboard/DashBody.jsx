@@ -1,46 +1,8 @@
 import React, { useState } from "react";
-import wood1 from '../../assets/image/wood1.jpg';
 import Slider from "../../js/Slider";
 import DailyDiscover from "./DailyDiscover";
 import DailyDiscover2 from "./DailyDiscover2";
-
-function ItemsDisplay({ category, onBack }) {
-
-        const items = Array.from({ length: 20 }, (_, i) => `Card ${i + 1}`);
-
-    return (
-        <div className="items-display">
-               
-            <div className="back">
-                <button onClick={onBack} className="btn btn-secondary">Back</button>
-            </div>
-            
-            <h2>{category}</h2>
-
-            <div className="item-body" style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(5, 1fr)',
-                gap: '10px',
-                padding: '20px',
-                maxHeight: '400px'
-            }}>
-                {items.map((item, index) => (
-                    <div key={index} className="cardbox" style={{
-                        border: '1px solid #ddd',
-                        borderRadius: '8px',
-                        padding: '20px',
-                        background: '#f9f9f9',
-                        boxShadow: '2px 2px 5px rgba(0,0,0,0.1)',
-                        textAlign: 'center',
-                        minHeight: '200px'      
-                    }}>
-                        {item}
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-}
+import ItemsDisplay from "./ItemsDisplay";
 
 function DashBody() {
     const [activeCategory, setActiveCategory] = useState(null);

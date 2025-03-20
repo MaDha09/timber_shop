@@ -40,6 +40,7 @@ body{
     margin-bottom: auto;
     margin-left: auto;
     margin-right: 50px;
+    cursor: pointer;
 }
 
 .nav_col2{
@@ -250,4 +251,50 @@ body{
 .item-body{
     height: 90%;
     width: 100%;
+}
+
+/* Blur effect when modal is open */
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+/* Modal Overlay */
+.modal_overlay {
+    position: fixed;  /* Ensures it stays on top */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Blurred background effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures modal is on top */
+}
+
+/* Modal Content */
+.modal_content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1001; /* Higher than overlay */
+    width: 70%; /* Ensures it doesn’t get too large */
+    height: 85%;
+    position: relative;
+}
+
+/* Close Button */
+.modal_content button {
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1001;
+    width: 35px; /* Ensures it doesn’t get too large */
+    height: 35px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
