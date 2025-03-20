@@ -298,3 +298,84 @@ body{
     top: 10px;
     right: 10px;
 }
+
+/* Modal Nav */
+
+.modal_nav{
+    height: 12%;
+    border-bottom: 1px solid #d9d6d6;
+}
+
+.modal_logo{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #d9d6d6;
+}
+.modal_logo img {
+    height: 80%;
+}
+
+.modal_body{
+    height: 90%;
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+}
+
+.modal_col1{
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid #d9d6d6;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.profile_con{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile_img{
+    height: 90%;
+    width: 80%;
+}
+.profile_img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.modal_menu{
+    height: 75%;
+    width: 100%;
+    border-top: 1px solid #d9d6d6;
+    padding: 0;
+}
+.modal_menu ul{
+    width: 100%;
+    padding: 0 !important;
+}
+.modal_menu li{
+    list-style: none;
+    border-bottom: 1px solid #d9d6d6;
+    width: 100% !important;
+    padding: 10px;
+    cursor: pointer;
+    color: #959595;
+}
+.modal_menu li:hover{
+    color: rgb(4, 4, 4);
+}
+.modal_menu li.active {
+    color: black; /* Active text color */
+}
+.modal_col2{
+    width: 80%;
+    height: 100%;
+}
