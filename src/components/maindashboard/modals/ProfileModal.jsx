@@ -30,8 +30,8 @@ const ProfileModal = () => {
                 </div>
                 <div className="modal_col2">
                 {selectedTab === "account" && <Account />}
-                {selectedTab === "orders" && <Orders />}
                 {selectedTab === "sales" && <Sales />}
+                {selectedTab === "orders" && <Orders />}
                 {selectedTab === "logout" && <Logout />}
                 </div>
             </div>

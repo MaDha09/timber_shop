@@ -10,16 +10,16 @@ const Sidebar = ({ onSelect, selectedTab }) => {
                 Account Information
             </li>
             <li
-                className={selectedTab === "orders" ? "active" : ""}
-                onClick={() => onSelect("orders")}
-            >
-                Orders
-            </li>
-            <li
                 className={selectedTab === "sales" ? "active" : ""}
                 onClick={() => onSelect("sales")}
             >
                 Sales
+            </li>
+            <li
+                className={selectedTab === "orders" ? "active" : ""}
+                onClick={() => onSelect("orders")}
+            >
+                Orders
             </li>
             <li
                 className={selectedTab === "logout" ? "active" : ""}
